@@ -6,7 +6,7 @@ import { verifyToken } from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.post('/login', async (req, res) => {
+router.post('/api/auth/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -47,11 +47,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', (_req, res) => {
+router.post('/api/auth/logout', (_req, res) => {
   return res.json({ success: true, message: 'Logout successful.' });
 });
 
-router.get('/me', verifyToken, (req, res) => {
+router.get('/api/auth/me', verifyToken, (req, res) => {
   return res.json({
     success: true,
     user: sanitizeUser(req.user),

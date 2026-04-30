@@ -29,15 +29,15 @@ router.use((req, res, next) => {
   return next();
 });
 
-router.get('/dashboard', (req, res) => {
+router.get('/api/auth/dashboard', (req, res) => {
   res.json({ success: true, data: getEmployeeDashboard(req.user.id) });
 });
 
-router.get('/tasks', (req, res) => {
+router.get('/api/auth/tasks', (req, res) => {
   res.json({ success: true, data: listEmployeeTasks(req.user.id, req.query) });
 });
 
-router.put('/tasks/:id', (req, res) => {
+router.put('/api/auth/tasks/:id', (req, res) => {
   const data = updateOwnTaskRecord(req.user.id, req.params.id, req.body);
   if (!data) {
     return res.status(404).json({ success: false, message: 'Task not found.' });
@@ -46,48 +46,48 @@ router.put('/tasks/:id', (req, res) => {
   return res.json({ success: true, data });
 });
 
-router.get('/attendance', (req, res) => {
+router.get('/api/auth/attendance', (req, res) => {
   res.json({ success: true, data: listEmployeeAttendance(req.user.id) });
 });
 
-router.post('/attendance/checkin', (req, res) => {
+router.post('/api/auth/attendance/checkin', (req, res) => {
   res.status(201).json({ success: true, data: checkInEmployee(req.user.id) });
 });
 
-router.post('/attendance/checkout', (req, res) => {
+router.post('/api/auth/attendance/checkout', (req, res) => {
   res.status(201).json({ success: true, data: checkOutEmployee(req.user.id) });
 });
 
-router.get('/leaves', (req, res) => {
+router.get('/api/auth/leaves', (req, res) => {
   res.json({ success: true, data: listEmployeeLeaves(req.user.id) });
 });
 
-router.post('/leaves', (req, res) => {
+router.post('/api/auth/leaves', (req, res) => {
   res.status(201).json({ success: true, data: createEmployeeLeave(req.user.id, req.body) });
 });
 
-router.get('/salary', (req, res) => {
+router.get('/api/auth/salary', (req, res) => {
   res.json({ success: true, data: getEmployeeSalary(req.user.id, req.query.month) });
 });
 
-router.get('/profile', (req, res) => {
+router.get('/api/auth/profile', (req, res) => {
   res.json({ success: true, data: getEmployeeProfile(req.user.id) });
 });
 
-router.put('/profile', (req, res) => {
+router.put('/api/auth/profile', (req, res) => {
   const data = updateEmployeeProfile(req.user.id, req.body);
   return res.json({ success: true, data });
 });
 
-router.get('/tickets', (req, res) => {
+router.get('/api/auth/tickets', (req, res) => {
   res.json({ success: true, data: listEmployeeTickets(req.user.id) });
 });
 
-router.post('/tickets', (req, res) => {
+router.post('/api/auth/tickets', (req, res) => {
   res.status(201).json({ success: true, data: createEmployeeTicket(req.user.id, req.body) });
 });
 
-router.get('/interview-prep', (req, res) => {
+router.get('/api/auth/interview-prep', (req, res) => {
   res.json({ success: true, data: listEmployeeInterviewPrep(req.user.id) });
 });
 

@@ -19,7 +19,7 @@ export const useAuthStore = create((set, get) => ({
     }
 
     try {
-      const { data } = await api.get('/api/auth/me');
+      const { data } = await api.get('/auth/me');
       set({ token, user: data.user, loading: false });
     } catch (_error) {
       localStorage.removeItem(storageKey);
@@ -31,7 +31,7 @@ export const useAuthStore = create((set, get) => ({
     set({ loginLoading: true });
 
     try {
-      const { data } = await api.post('/api/auth/login', credentials);
+      const { data } = await api.post('/auth/login', credentials);
       localStorage.setItem(storageKey, data.token);
       set({
         token: data.token,
@@ -50,7 +50,7 @@ export const useAuthStore = create((set, get) => ({
 
   logout: async () => {
     try {
-      await api.post('/api/auth/logout');
+      await api.post('/auth/logout');
     } catch (_error) {
     } finally {
       localStorage.removeItem(storageKey);

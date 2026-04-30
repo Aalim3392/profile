@@ -4,7 +4,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 export const api = axios.create({
   baseURL:
-  "https://jobportal-backend-my50.onrender.com/api"
+  "https://hrms-backend-he8b.onrender.com"
 });
 
 api.interceptors.request.use((config) => {

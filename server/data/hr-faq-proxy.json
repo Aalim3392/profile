@@ -1,0 +1,506 @@
+[
+  {
+    "id": "greeting",
+    "category": "general",
+    "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
+    "answer": "Hello. I can help with leave balances, attendance, salary slips, tasks, interviews, support tickets, and general HRMS guidance."
+  },
+  {
+    "id": "who_are_you",
+    "category": "general",
+    "patterns": ["who are you", "what are you", "what can you do"],
+    "answer": "I am the HRMS Pro assistant. I help employees and admins with HR workflows, attendance, leave questions, payroll FAQs, interview preparation, and support ticket guidance."
+  },
+  {
+    "id": "login_help",
+    "category": "auth",
+    "patterns": ["cannot login", "can't login", "login issue", "sign in problem"],
+    "answer": "Please verify your email and password first. If the problem continues, log out, refresh the page, and try again. If access still fails, raise a support ticket under the IT category."
+  },
+  {
+    "id": "forgot_password",
+    "category": "auth",
+    "patterns": ["forgot password", "lost password", "password forgotten"],
+    "answer": "Use the change password area in your profile after logging in. If you are locked out completely, contact an admin or raise an IT support ticket for credential assistance."
+  },
+  {
+    "id": "reset_password",
+    "category": "auth",
+    "patterns": ["reset password", "change password", "update password"],
+    "answer": "Open the Profile page, enter your new password in the change password section, and save the update. Use a strong password that is easy for you to remember but difficult for others to guess."
+  },
+  {
+    "id": "admin_login",
+    "category": "auth",
+    "patterns": ["admin login", "admin credentials", "how does admin log in"],
+    "answer": "Admins sign in from the same login screen. After successful authentication, the app redirects them to the admin dashboard automatically."
+  },
+  {
+    "id": "employee_login",
+    "category": "auth",
+    "patterns": ["employee login", "employee credentials", "how does employee log in"],
+    "answer": "Employees also use the shared login screen. After sign-in, they are redirected to the employee dashboard with self-service pages for tasks, attendance, leaves, salary, profile, tickets, and notifications."
+  },
+  {
+    "id": "role_access",
+    "category": "auth",
+    "patterns": ["role access", "admin access", "employee access", "why can't i open admin"],
+    "answer": "Access is role-based. Admin routes only open for admin users, and employee routes only open for employee users. If you need expanded access, contact your administrator."
+  },
+  {
+    "id": "dashboard_navigation",
+    "category": "navigation",
+    "patterns": ["where is dashboard", "how to navigate", "sidebar items", "where do i find pages"],
+    "answer": "Use the left sidebar to move between sections. Admins can access employees, attendance, leaves, tasks, jobs, interviews, analytics, tickets, and notifications. Employees can access tasks, attendance, leaves, salary, profile, tickets, and notifications."
+  },
+  {
+    "id": "attendance_checkin",
+    "category": "attendance",
+    "patterns": ["check in", "mark attendance", "start attendance", "punch in"],
+    "answer": "Open the Attendance page and use the Check in button. That creates or updates today's attendance record and marks your day as present."
+  },
+  {
+    "id": "attendance_checkout",
+    "category": "attendance",
+    "patterns": ["check out", "end attendance", "punch out"],
+    "answer": "Open the Attendance page and use the Check out button. The system records your end time and updates your worked hours for the day."
+  },
+  {
+    "id": "attendance_late",
+    "category": "attendance",
+    "patterns": ["late attendance", "late check in", "running late"],
+    "answer": "If you are late, still check in through the Attendance page so the system has the correct timestamp. If your organization requires justification, notify your manager separately."
+  },
+  {
+    "id": "attendance_halfday",
+    "category": "attendance",
+    "patterns": ["half day attendance", "mark half day", "work half day"],
+    "answer": "Half-day attendance can be recorded by admins from the attendance management section. If you need a half-day applied, notify your manager or HR according to your team process."
+  },
+  {
+    "id": "attendance_absent",
+    "category": "attendance",
+    "patterns": ["marked absent", "wrongly absent", "attendance absent by mistake"],
+    "answer": "If you were marked absent by mistake, raise it with your admin or HR team. Admins can correct attendance records from the attendance management page."
+  },
+  {
+    "id": "attendance_policy",
+    "category": "attendance",
+    "patterns": ["attendance policy", "attendance rules", "work hours policy"],
+    "answer": "Attendance is managed through daily check-in and check-out records. If you need a rule interpretation for lateness, leave overlap, or correction requests, follow your internal HR policy and escalate unclear cases through a support ticket."
+  },
+  {
+    "id": "attendance_hours",
+    "category": "attendance",
+    "patterns": ["hours worked", "average hours", "attendance hours"],
+    "answer": "Attendance summaries track present days, absent days, leave days, half days, and average hours worked. Use the Attendance page for your latest record and trend."
+  },
+  {
+    "id": "leave_balance",
+    "category": "leave",
+    "patterns": ["leave balance", "how many leaves", "remaining leave", "available leave"],
+    "answer": "I can read your current leave balance from HRMS and summarize your remaining sick, casual, and earned leave."
+  },
+  {
+    "id": "apply_sick_leave",
+    "category": "leave",
+    "patterns": ["apply sick leave", "take sick leave", "request sick leave"],
+    "answer": "Open the Leave Management page, choose Sick leave, add the from and to dates, write a short reason, and submit the request. It will appear in your leave history with a pending status until reviewed."
+  },
+  {
+    "id": "apply_casual_leave",
+    "category": "leave",
+    "patterns": ["apply casual leave", "request casual leave", "take casual leave"],
+    "answer": "Open the Leave Management page, select Casual leave, choose the date range, add your reason, and submit the request for approval."
+  },
+  {
+    "id": "apply_earned_leave",
+    "category": "leave",
+    "patterns": ["apply earned leave", "request earned leave", "take earned leave"],
+    "answer": "Use the Leave Management page and submit an Earned leave request with the relevant dates and reason. The request will move through the normal approval flow."
+  },
+  {
+    "id": "leave_status",
+    "category": "leave",
+    "patterns": ["leave status", "pending leave", "approved leave", "rejected leave"],
+    "answer": "You can track each leave request from your Leave Management page. The status will show as pending, approved, or rejected based on admin review."
+  },
+  {
+    "id": "leave_approval_time",
+    "category": "leave",
+    "patterns": ["leave approval time", "when will leave be approved", "how long for leave approval"],
+    "answer": "Approval timing depends on admin review and internal policy. For urgent leave, submit the request in HRMS and also notify your manager directly."
+  },
+  {
+    "id": "leave_cancel",
+    "category": "leave",
+    "patterns": ["cancel leave", "withdraw leave", "remove leave request"],
+    "answer": "If you need to cancel a pending leave request, contact your admin or HR team so they can guide you on the approved process or update the request manually if needed."
+  },
+  {
+    "id": "salary_slip",
+    "category": "salary",
+    "patterns": ["salary slip", "payslip", "download salary", "print salary"],
+    "answer": "Open the Salary Slips page, choose the month you want, review the breakdown, and use the Print button to print or save a copy."
+  },
+  {
+    "id": "salary_components",
+    "category": "salary",
+    "patterns": ["salary components", "basic hra allowances", "salary breakdown"],
+    "answer": "The salary page shows a breakdown including Basic, HRA, Allowances, Deductions, Net Pay, and Annual CTC for the selected month."
+  },
+  {
+    "id": "salary_deductions",
+    "category": "salary",
+    "patterns": ["salary deductions", "why deduction", "pay deducted"],
+    "answer": "Salary deductions appear in your salary breakdown. If something looks incorrect, raise a payroll support ticket with the month and issue details so the finance team can review it."
+  },
+  {
+    "id": "payroll_issue",
+    "category": "salary",
+    "patterns": ["payroll issue", "salary issue", "pay problem"],
+    "answer": "Use the Tickets page and create a support request under the Payroll category. Include the month, the discrepancy you noticed, and any useful context."
+  },
+  {
+    "id": "profile_update",
+    "category": "profile",
+    "patterns": ["update profile", "edit phone", "change bio", "update location"],
+    "answer": "Open the Profile page to update your phone number, location, skills, and bio. Save the form to apply the changes."
+  },
+  {
+    "id": "change_password_profile",
+    "category": "profile",
+    "patterns": ["change password in profile", "profile password", "update password in profile"],
+    "answer": "The Profile page includes a change password field. Enter the new password there and save the profile to update it."
+  },
+  {
+    "id": "skills_update",
+    "category": "profile",
+    "patterns": ["update skills", "edit skills", "add skills"],
+    "answer": "Go to your Profile page and update the skills field with a comma-separated list. Save the form to keep your employee record current."
+  },
+  {
+    "id": "task_view",
+    "category": "tasks",
+    "patterns": ["view my tasks", "where are tasks", "task list"],
+    "answer": "Open the My Tasks page from the employee sidebar to see all tasks assigned to you, along with their priority, due date, and current status."
+  },
+  {
+    "id": "task_start",
+    "category": "tasks",
+    "patterns": ["start task", "mark in progress", "begin task"],
+    "answer": "Use the My Tasks page and click Start on the relevant task. That updates the task status to in-progress."
+  },
+  {
+    "id": "task_complete",
+    "category": "tasks",
+    "patterns": ["complete task", "mark completed", "finish task"],
+    "answer": "Use the Complete action on the task card from the My Tasks page. The status will change to completed and the completion timestamp will be recorded."
+  },
+  {
+    "id": "overdue_task",
+    "category": "tasks",
+    "patterns": ["overdue task", "late task", "missed deadline"],
+    "answer": "If a task is overdue, review the due date and update your progress immediately. If you need timeline support, speak with your manager and keep the task status accurate."
+  },
+  {
+    "id": "task_priority",
+    "category": "tasks",
+    "patterns": ["task priority", "urgent task", "high priority task"],
+    "answer": "Task cards can be tagged as low, medium, high, or urgent. Use the priority label to decide what needs attention first."
+  },
+  {
+    "id": "support_ticket_create",
+    "category": "tickets",
+    "patterns": ["create support ticket", "raise support ticket", "new ticket"],
+    "answer": "Open the Tickets page, enter a subject, choose the category, describe the issue, set the priority if needed, and submit the form."
+  },
+  {
+    "id": "support_ticket_types",
+    "category": "tickets",
+    "patterns": ["ticket category", "support categories", "types of ticket"],
+    "answer": "Support tickets can be filed under HR policy, Payroll, IT, or General. Choose the category that best matches your request so it reaches the right team faster."
+  },
+  {
+    "id": "support_ticket_status",
+    "category": "tickets",
+    "patterns": ["ticket status", "open ticket", "resolved ticket", "closed ticket"],
+    "answer": "Support tickets move through statuses such as open, in-progress, resolved, and closed. You can review your ticket history from the Tickets page."
+  },
+  {
+    "id": "job_postings",
+    "category": "hiring",
+    "patterns": ["job postings", "open positions", "hiring roles"],
+    "answer": "Admins can manage job postings from the Jobs section, where they can publish roles, review applicant counts, and monitor job status."
+  },
+  {
+    "id": "applications_pipeline",
+    "category": "hiring",
+    "patterns": ["application pipeline", "move applicant stage", "screening interview offer"],
+    "answer": "Application stages typically include applied, screening, interview, offer, rejected, and hired. Admins can update each applicant’s stage from the hiring workspace."
+  },
+  {
+    "id": "interview_schedule",
+    "category": "interviews",
+    "patterns": ["schedule interview", "interview timing", "upcoming interview"],
+    "answer": "Admins can schedule interviews from the Interviews page by linking a candidate, interviewer, date, time, and mode. Employees can review interview-related guidance through the assistant."
+  },
+  {
+    "id": "interview_prep_react",
+    "category": "interviews",
+    "patterns": ["react interview", "prepare for react interview", "frontend interview prep"],
+    "answer": "For a React interview, focus on component architecture, state management, hooks, rendering behavior, API integration, performance basics, and accessibility. Be ready to explain real project decisions clearly."
+  },
+  {
+    "id": "interview_prep_general",
+    "category": "interviews",
+    "patterns": ["interview prep", "prepare for interview", "interview tips"],
+    "answer": "A strong interview plan is to review the role, prepare concise examples using real work, rehearse problem-solving aloud, and keep questions ready about team goals, success metrics, and expectations."
+  },
+  {
+    "id": "onboarding_help",
+    "category": "onboarding",
+    "patterns": ["onboarding help", "new employee help", "how do i get started"],
+    "answer": "New employees should begin with profile completion, attendance tracking, leave policy awareness, task review, and the tickets page for any setup blockers. If a tool is missing, raise an IT ticket."
+  },
+  {
+    "id": "wfh_policy",
+    "category": "policy",
+    "patterns": ["work from home policy", "wfh policy", "remote work policy"],
+    "answer": "The system can guide you through general work-from-home questions, but exact eligibility and approval rules depend on your organization’s HR policy. If the rule is unclear, raise an HR policy ticket."
+  },
+  {
+    "id": "office_hours",
+    "category": "policy",
+    "patterns": ["office hours", "working hours", "business hours"],
+    "answer": "Office-hour expectations are usually governed by your internal attendance and HR policies. Record your attendance accurately and consult HR if you need a formal interpretation."
+  },
+  {
+    "id": "holiday_calendar",
+    "category": "policy",
+    "patterns": ["holiday calendar", "public holidays", "holiday list"],
+    "answer": "Holiday details are usually maintained by HR. If your holiday calendar is not published in the system yet, ask HR or raise an HR policy ticket for the latest schedule."
+  },
+  {
+    "id": "notifications_help",
+    "category": "notifications",
+    "patterns": ["notifications", "mark notification read", "unread alerts"],
+    "answer": "Use the Notifications page or the bell in the top bar to review alerts and mark them as read. Notifications include task updates, leave decisions, hiring updates, and support workflow changes."
+  },
+  {
+    "id": "data_privacy",
+    "category": "policy",
+    "patterns": ["data privacy", "who can see my data", "employee data access"],
+    "answer": "Sensitive employee information should only be accessed by authorized users through role-based permissions. If you suspect inappropriate access, report it immediately to HR or an administrator."
+  },
+  {
+    "id": "reimbursement_policy",
+    "category": "policy",
+    "patterns": ["reimbursement", "expense claim", "claim expense"],
+    "answer": "Reimbursement workflows depend on your company policy. If a dedicated claims module is not available, raise a finance or general support ticket with the expense details and supporting documents."
+  },
+  {
+    "id": "manager_info",
+    "category": "employee",
+    "patterns": ["who is my manager", "manager details", "reporting manager"],
+    "answer": "Your reporting structure is maintained in the employee directory. If you cannot confirm your reporting manager from the system view, contact HR or your admin."
+  },
+  {
+    "id": "employee_code",
+    "category": "employee",
+    "patterns": ["employee code", "staff code", "my employee id"],
+    "answer": "Your employee code is part of your employee record in HRMS. Admins can see and update it directly from employee management."
+  },
+  {
+    "id": "export_csv",
+    "category": "admin",
+    "patterns": ["export csv", "download employee csv", "employee export"],
+    "answer": "Admins can export the employee directory from the Employee Management page using the Export CSV action."
+  },
+  {
+    "id": "analytics_help",
+    "category": "analytics",
+    "patterns": ["analytics page", "funnel chart", "productivity chart", "dashboard analytics"],
+    "answer": "The analytics section summarizes hiring funnel stages, monthly leave trends, task completion rate, top performers, and department productivity using live data from SQLite."
+  },
+  {
+    "id": "contact_hr",
+    "category": "support",
+    "patterns": ["contact hr", "talk to hr", "reach hr team"],
+    "answer": "For policy clarification, employment documentation, or sensitive people matters, contact HR directly or raise an HR policy support ticket from the Tickets page."
+  },
+  {
+    "id": "cannot_answer",
+    "category": "support",
+    "patterns": ["you do not know", "unknown issue", "something else", "not answered"],
+    "answer": "If the issue is outside the assistant’s knowledge or needs a policy decision, the safest next step is to raise a support ticket with the full context so the right team can respond."
+  },
+  {
+    "id": "goodbye",
+    "category": "general",
+    "patterns": ["bye", "goodbye", "thanks", "thank you"],
+    "answer": "You're welcome. Come back anytime for help with HRMS workflows, interview prep, leave, attendance, salary, or support guidance."
+  },
+  {
+    "id": "probation_policy",
+    "category": "policy",
+    "patterns": ["probation policy", "probation period", "during probation"],
+    "answer": "Probation rules vary by organization. For official guidance on probation duration, review milestones, or confirmation process, contact HR or raise an HR policy ticket."
+  },
+  {
+    "id": "confirmation_letter",
+    "category": "documents",
+    "patterns": ["confirmation letter", "employment confirmation", "job confirmation letter"],
+    "answer": "Confirmation letters are usually handled by HR. If the document is not available in the system, raise an HR policy or general support ticket and mention the exact document you need."
+  },
+  {
+    "id": "experience_letter",
+    "category": "documents",
+    "patterns": ["experience letter", "service letter", "work experience document"],
+    "answer": "Experience-letter requests are generally processed by HR. Submit a support ticket with the document name, intended use, and any time sensitivity."
+  },
+  {
+    "id": "address_update",
+    "category": "profile",
+    "patterns": ["change address", "update address", "edit address"],
+    "answer": "If your address is stored in your employee profile workflow, ask HR or your admin for the correct update path. Use the support ticket flow if a direct form field is not available."
+  },
+  {
+    "id": "phone_update",
+    "category": "profile",
+    "patterns": ["update phone", "change mobile number", "edit phone number"],
+    "answer": "Open the Profile page and update your phone number there. Save the form to keep the employee record current."
+  },
+  {
+    "id": "bio_help",
+    "category": "profile",
+    "patterns": ["what to write in bio", "profile bio", "bio section help"],
+    "answer": "Use your bio to summarize your role, strengths, tools, and focus areas in a few clear lines. Keep it professional and practical so teammates can understand what you work on."
+  },
+  {
+    "id": "ticket_priority",
+    "category": "tickets",
+    "patterns": ["ticket priority", "low medium high ticket", "how to set priority"],
+    "answer": "Choose a higher priority only when the issue is blocking urgent work or requires quick handling. Medium is suitable for normal operational issues, and low is best for non-blocking requests."
+  },
+  {
+    "id": "ticket_response_time",
+    "category": "tickets",
+    "patterns": ["ticket response time", "when will ticket be answered", "support sla"],
+    "answer": "Response time depends on queue volume and severity. Submit complete details in the ticket so the support team can act faster, especially for IT and payroll issues."
+  },
+  {
+    "id": "attendance_correction",
+    "category": "attendance",
+    "patterns": ["attendance correction", "fix attendance", "wrong check in time"],
+    "answer": "Attendance corrections usually require admin review. Share the correct date, expected timing, and the issue through HR or a support ticket so the record can be updated accurately."
+  },
+  {
+    "id": "weekoff_policy",
+    "category": "policy",
+    "patterns": ["weekoff policy", "weekly off", "weekend policy"],
+    "answer": "Weekly-off rules are governed by company policy and role expectations. If you need a formal interpretation for your team or schedule, raise an HR policy ticket."
+  },
+  {
+    "id": "comp_off",
+    "category": "leave",
+    "patterns": ["comp off", "compensatory off", "working on holiday"],
+    "answer": "Comp-off handling depends on internal HR rules. Record the work accurately and check with HR or your admin on how compensatory leave is approved and tracked in your organization."
+  },
+  {
+    "id": "maternity_leave",
+    "category": "leave",
+    "patterns": ["maternity leave", "parental leave", "pregnancy leave"],
+    "answer": "Extended leave categories such as maternity or parental leave usually follow formal HR policy and documentation requirements. Please contact HR directly or open an HR policy ticket for the official process."
+  },
+  {
+    "id": "paternity_leave",
+    "category": "leave",
+    "patterns": ["paternity leave", "parent leave for father", "new parent leave"],
+    "answer": "Paternity or parental leave rules are organization-specific. For official eligibility and duration, contact HR or raise an HR policy support ticket."
+  },
+  {
+    "id": "leave_document",
+    "category": "leave",
+    "patterns": ["medical certificate", "leave document", "doctor note for leave"],
+    "answer": "If your policy requires supporting documents for leave, keep them ready and mention that in your leave request or support follow-up. HR will tell you whether an attachment or manual verification is needed."
+  },
+  {
+    "id": "salary_revision",
+    "category": "salary",
+    "patterns": ["salary revision", "pay raise", "salary increment"],
+    "answer": "Salary revision cycles and approval paths are usually handled outside the chatbot flow. Speak with your manager or HR for review schedules and compensation policy."
+  },
+  {
+    "id": "bank_details",
+    "category": "salary",
+    "patterns": ["bank details", "salary account", "update bank account"],
+    "answer": "Bank-detail updates are sensitive and should go through the approved HR or finance process. If the app does not expose a secure form for that change, raise a payroll ticket."
+  },
+  {
+    "id": "tax_document",
+    "category": "salary",
+    "patterns": ["tax document", "form 16", "tax proof", "income proof"],
+    "answer": "Tax-related documents are usually managed by payroll or finance. Raise a payroll ticket with the document name and period required."
+  },
+  {
+    "id": "joining_date_help",
+    "category": "employee",
+    "patterns": ["joining date", "date of joining", "my joining information"],
+    "answer": "Your joining date is stored in your employee record. If the displayed date is incorrect, contact your admin or HR team to get the record corrected."
+  },
+  {
+    "id": "department_change",
+    "category": "employee",
+    "patterns": ["change department", "department transfer", "move to another team"],
+    "answer": "Department changes are administrative updates and normally require approval. Once approved, an admin can update the employee record in the management workspace."
+  },
+  {
+    "id": "position_change",
+    "category": "employee",
+    "patterns": ["change position", "designation update", "title update"],
+    "answer": "Role or designation changes are maintained in the employee record by admins. If the displayed title is outdated, contact HR or your administrator."
+  },
+  {
+    "id": "interview_mode",
+    "category": "interviews",
+    "patterns": ["video interview", "in person interview", "phone interview mode"],
+    "answer": "Interviews can be scheduled in video, in-person, or phone mode. The hiring team sets the mode based on the stage and role requirements."
+  },
+  {
+    "id": "interview_feedback",
+    "category": "interviews",
+    "patterns": ["interview feedback", "add feedback", "candidate rating"],
+    "answer": "Admins can add feedback, notes, and a rating from the Interviews page after a conversation is completed. Keeping feedback concise and evidence-based makes the hiring process more useful."
+  },
+  {
+    "id": "offer_stage",
+    "category": "hiring",
+    "patterns": ["offer stage", "candidate offer", "move to offer"],
+    "answer": "When a candidate clears the required interviews, admins can move the application to the offer stage from the applicant pipeline and record the latest status there."
+  },
+  {
+    "id": "hired_stage",
+    "category": "hiring",
+    "patterns": ["mark hired", "candidate hired", "move to hired"],
+    "answer": "Use the application pipeline to update the candidate to hired once the final decision is confirmed and the onboarding handoff is ready."
+  },
+  {
+    "id": "admin_notifications",
+    "category": "notifications",
+    "patterns": ["admin notifications", "why am i seeing alerts", "notification bell"],
+    "answer": "The notification bell shows unread alerts such as leave decisions, task assignments, hiring updates, and support workflow changes. Open the Notifications page to review and mark them as read."
+  },
+  {
+    "id": "employee_record_visibility",
+    "category": "employee",
+    "patterns": ["who can edit employee", "employee record edit", "who updates employee data"],
+    "answer": "Admins manage employee records such as department, position, code, salary, and status. Employees can update only their own profile-related details from the self-service profile page."
+  },
+  {
+    "id": "general_help",
+    "category": "general",
+    "patterns": ["help", "need help", "what should i ask", "assist me"],
+    "answer": "You can ask about attendance, leave, salary slips, tasks, profile updates, tickets, interview preparation, hiring workflow, or general HRMS navigation and policy guidance."
+  }
+]

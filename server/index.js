@@ -16,26 +16,11 @@ const port = process.env.PORT || 5000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const clientDistPath = path.resolve(__dirname, '../client/dist');
-app.use(cors());
-  .split(',')
-  .map((origin) => origin.trim())
-  .filter(Boolean);
 
+app.use(cors());
 initializeDatabase();
 
-app.use(
-  cors({
-    origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-        return;
-      }
 
-      callback(new Error(`CORS blocked for origin: ${origin}`));
-    },
-    credentials: true,
-  })
-);
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => {

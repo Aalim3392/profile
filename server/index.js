@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const clientDistPath = path.resolve(__dirname, '../client/dist');
 
 app.use(cors());
-initializeDatabase();
+initializeDatabase({ forceSeed: true });
 
 
 app.use(express.json());
